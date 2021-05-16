@@ -18,5 +18,9 @@ dev_dependencies:
 
 flutter:
   plugin:
-    androidPackage: io.flutter.plugins.flutter_launch_store
-    pluginClass: StoreLauncherPlugin
+    platforms:
+      android:
+        package: io.flutter.plugins.flutter_launch_store
+        pluginClass: StoreLauncherPlugin
+      ios:
+        pluginClass: StoreLauncherPlugin

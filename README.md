@@ -10,7 +10,7 @@ To use this plugin, add `flutter_launch_store` as a [dependency in your pubspec.
 
 ### Example
 
-``` dart
+```dart
 import 'package:flutter_launch_store/flutter_launch_store.dart';
 
 try {
@@ -21,4 +21,15 @@ try {
 } catch (e) {
   print(e.toString());
 }
+```
+
+### iOS
+
+Don't forget to add the following to `Info.plist`:
+
+```xml
+<key>LSApplicationQueriesSchemes</key>
+<array>
+    <string>itms-apps</string>
+</array>
 ```

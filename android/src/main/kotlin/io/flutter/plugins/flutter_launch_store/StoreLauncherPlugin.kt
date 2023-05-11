@@ -97,7 +97,7 @@ class StoreLauncherPlugin : FlutterPlugin, MethodCallHandler {
   }
 
   private fun openWithStore(appId: String): Boolean {
-    if (appId.endsWith('.huawei', true)) {
+    if (appId.endsWith(".huawei", true)) {
       return launchIntent("appmarket://details?id=$appId", "com.huawei.appmarket")
     }
     else if (isPackageInstalled("com.android.vending", context.packageManager)) {

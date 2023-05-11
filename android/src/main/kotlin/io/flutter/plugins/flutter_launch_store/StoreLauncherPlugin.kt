@@ -76,15 +76,9 @@ class StoreLauncherPlugin : FlutterPlugin, MethodCallHandler {
   private fun launchIntent(url: String, packageName: String): Boolean {
     val intent = Intent(Intent.ACTION_VIEW).apply {
       data = Uri.parse(url)
-      // make sure it does NOT open in the stack of your activity
       addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-      // task reparenting if needed
       addFlags(Intent.FLAG_ACTIVITY_RESET_TASK_IF_NEEDED)
-      // if the app store was already open in a search result
-      //  this make sure it still go to the app page you requested
       addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
-      // this make sure only the appropriate app is allowed to
-      // intercept the intent
       setPackage(packageName)
     }
     context.startActivity(intent)
@@ -103,7 +97,10 @@ class StoreLauncherPlugin : FlutterPlugin, MethodCallHandler {
   }
 
   private fun openWithStore(appId: String): Boolean {
-    if (isPackageInstalled("com.android.vending", context.packageManager)) {
+    if (appId.endsWith('.huawei', true)) {
+      return launchIntent("appmarket://details?id=$appId", "com.huawei.appmarket")
+    }
+    else if (isPackageInstalled("com.android.vending", context.packageManager)) {
       return launchIntent("market://details?id=$appId", "com.android.vending")
     }
     else if (isPackageInstalled("com.huawei.appmarket", context.packageManager)) {

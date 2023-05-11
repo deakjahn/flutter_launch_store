@@ -2,6 +2,9 @@
 
 A Flutter plugin for launching a Store in the mobile platform. Supports AppStore, PlayStore and AppGallery.
 
+On Android, it checks whether the appropriate vendor service is installed. If both Google's and Huawei's
+services are present, it launches Google Play unless the app package ID ends in ".huawei".
+
 It's a fork of the original https://github.com/heqingbao/store_launcher that seemed to be abandoned.
 
 ## Usage

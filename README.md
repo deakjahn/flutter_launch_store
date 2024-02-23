@@ -11,6 +11,8 @@ It's a fork of the original https://github.com/heqingbao/store_launcher that see
 
 To use this plugin, add `flutter_launch_store` as a [dependency in your pubspec.yaml file](https://flutter.dev/platform-plugins/).
 
+Note that the Android Emulator doesn't normally have the stores installed. You should try the functioning on a real device.
+
 ### Example
 
 ```dart

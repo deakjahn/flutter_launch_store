@@ -36,24 +36,24 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Plugin flutter_launch_store example app'),
+          title: const Text('Plugin flutter_launch_store example app'),
         ),
         body: Container(
-          padding: EdgeInsets.all(12.0),
+          padding: const EdgeInsets.all(12.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               TextField(
                 controller: myController,
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   hintText: 'Please enter Package Name',
                   border: OutlineInputBorder(borderSide: BorderSide(color: Colors.teal)),
                 ),
               ),
               ElevatedButton(
                 onPressed: openWithStore,
-                child: Text('Open With Store'),
+                child: const Text('Open With Store'),
               ),
             ],
           ),

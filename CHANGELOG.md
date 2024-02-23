@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.0.6] - 2024-02-23
+
+* Deprecated in Java
+
 ## [1.0.5] - 2024-02-23
 
 * Remove deprecated old plugin registration

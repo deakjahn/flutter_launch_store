@@ -16,13 +16,13 @@ import android.content.pm.PackageManager
 class StoreLauncherPlugin : FlutterPlugin, MethodCallHandler {
   private lateinit var context: Context
 
-  override fun onAttachedToEngine(@NonNull flutterPluginBinding: FlutterPlugin.FlutterPluginBinding) {
-    val channel = MethodChannel(flutterPluginBinding.getFlutterEngine().getDartExecutor(), "flutter_launch_store")
-    context = flutterPluginBinding.applicationContext
+  override fun onAttachedToEngine(binding: FlutterPlugin.FlutterPluginBinding) {
+    val channel = MethodChannel(binding.binaryMessenger, "flutter_launch_store")
+    context = binding.applicationContext
     channel.setMethodCallHandler(this)
   }
 
-  override fun onMethodCall(@NonNull call: MethodCall, @NonNull result: Result) {
+  override fun onMethodCall(call: MethodCall, @NonNull result: Result) {
     if (call.method == "openWithStore") {
       if (!call.hasArgument("app_id")) {
         result.error("1", "Missing Parameter in method: (${call.method})", null)
@@ -41,7 +41,7 @@ class StoreLauncherPlugin : FlutterPlugin, MethodCallHandler {
     }
   }
 
-  override fun onDetachedFromEngine(@NonNull binding: FlutterPlugin.FlutterPluginBinding) {
+  override fun onDetachedFromEngine(binding: FlutterPlugin.FlutterPluginBinding) {
   }
 
   private fun isPackageInstalled(packageName: String, packageManager: PackageManager): Boolean {

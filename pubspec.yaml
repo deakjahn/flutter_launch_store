@@ -1,6 +1,6 @@
 name: flutter_launch_store
 description: A Flutter plugin for launching a Store in the mobile platform. Supports AppStore, PlayStore and AppGallery.
-version: 1.0.5
+version: 1.0.6
 homepage: https://github.com/deakjahn/flutter_launch_store
 
 environment:

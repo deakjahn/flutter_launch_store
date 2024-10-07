@@ -63,6 +63,6 @@ flutter {
 dependencies {
   implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.9.22"
   testImplementation 'junit:junit:4.12'
-  androidTestImplementation 'androidx.test:runner:1.5.2'
-  androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+  androidTestImplementation 'androidx.test:runner:1.6.1'
+  androidTestImplementation 'androidx.test.espresso:espresso-core:3.6.1'
 }

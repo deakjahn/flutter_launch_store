@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.0.7] - 2024-07-10
+
+Build version changes
+
 ## [1.0.6] - 2024-02-23
 
 * Deprecated in Java

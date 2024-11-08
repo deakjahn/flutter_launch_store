@@ -25,3 +25,12 @@ flutter:
         pluginClass: StoreLauncherPlugin
       ios:
         pluginClass: StoreLauncherPlugin
+
+funding:
+  - https://buymeacoffee.com/deakjahn
+
+topics:
+  - flutter
+  - play-store
+  - app-store
+  - app-gallery

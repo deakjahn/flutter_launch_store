@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.0.9] - 2026-06-12
+
+* Upgrade gradle
+
 ## [1.0.8] - 2024-07-10
 
 * Build version changes

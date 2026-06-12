@@ -2,17 +2,24 @@ group 'io.flutter.plugins.flutter_launch_store'
 version '1.0-SNAPSHOT'
 
 apply plugin: 'com.android.library'
-apply plugin: 'kotlin-android'
+
+kotlin {
+  compilerOptions {
+    jvmTarget = org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_17
+  }
+}
 
 android {
   namespace "io.flutter.plugins.flutter_launch_store"
-  compileSdkVersion 34
+  compileSdkVersion flutter.compileSdkVersion
+  ndkVersion flutter.ndkVersion
 
   sourceSets {
     main.java.srcDirs += 'src/main/kotlin'
   }
   defaultConfig {
-    minSdkVersion 16
+    minSdkVersion flutter.minSdkVersion
+    targetSdkVersion flutter.targetSdkVersion
     testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
   }
   lintOptions {
@@ -21,9 +28,6 @@ android {
   compileOptions {
     sourceCompatibility JavaVersion.VERSION_17
     targetCompatibility JavaVersion.VERSION_17
-  }
-  kotlinOptions {
-    jvmTarget = 17
   }
 }
 

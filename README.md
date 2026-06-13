@@ -38,3 +38,9 @@ Don't forget to add the following to `Info.plist`:
     <string>itms-apps</string>
 </array>
 ```
+
+## Support
+
+If you like this package, please consider supporting it.
+
+<a href="https://www.buymeacoffee.com/deakjahn" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Book" height="60" width="217"></a>

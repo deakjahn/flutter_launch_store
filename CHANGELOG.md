@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.1.0] - 2026-06-13
+
+* AGP 9, Kotlin DSL
+
 ## [1.0.9] - 2026-06-12
 
 * Upgrade gradle
